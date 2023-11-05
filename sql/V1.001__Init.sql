@@ -7,9 +7,9 @@ CREATE TABLE gcs_file
 );
 
 CREATE TYPE gender_type AS ENUM (
-    'Male',
-    'Female',
-    'Unrevealed'
+    'MALE',
+    'FEMALE',
+    'UNREVEALED'
 );
 
 CREATE TYPE fee_type AS ENUM (
@@ -46,6 +46,7 @@ CREATE TABLE account
     refresh_token   VARCHAR,
     image_uuid      UUID REFERENCES gcs_file (file_uuid),
     role            role_type      NOT NULL,
+    is_verified     BOOLEAN DEFAULT FALSE,
     is_google_login BOOLEAN DEFAULT FALSE
 );
 
