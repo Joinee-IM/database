@@ -95,14 +95,17 @@ CREATE TABLE venue
     name                 VARCHAR NOT NULL,
     floor                VARCHAR NOT NULL,
     reservation_interval INTEGER,
+    is_reservable        BOOLEAN DEFAULT FALSE, -- 可不可預約
+    is_chargeable        BOOLEAN DEFAULT FALSE, -- 收不收費
     fee_rate             FLOAT,
     fee_type             fee_type,
-    area                 INTEGER NOT NULL,
+    area                 INTEGER NOT NULL,  -- 面積
+    current_user_count   INTEGER DEFAULT 0, -- 目前使用人數
     capability           INTEGER NOT NULL,
     sport_equipments     VARCHAR,
     facilities           VARCHAR,
     court_count          INTEGER NOT NULL,
-    court_type           VARCHAR NOT NULL,
+    court_type           VARCHAR NOT NULL, -- 小單位的單位（e.g. 桌/網)
     sport_id             INTEGER NOT NULL REFERENCES sport (id)
 );
 
