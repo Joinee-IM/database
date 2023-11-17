@@ -18,3 +18,6 @@ run:
 
 shell:
 	docker exec -it cloud-native-db psql -U dev database
+
+logs:
+	docker logs cloud-native-db
