@@ -20,9 +20,19 @@ INSERT INTO stadium (id, name, district_id, contact_number, description, long, l
 INSERT INTO venue (id, stadium_id, name, floor, reservation_interval, is_reservable, is_chargeable, fee_rate, fee_type, area, current_user_count, capability, sport_equipments, facilities, court_count, court_type, sport_id)
      VALUES (1, 1, 'venue1', '3', 3, 't', 't', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', 3, '場', 1);
 
+INSERT INTO court (id, venue_id) VALUES (1, 1), (2, 1), (3, 1), (4, 1);
+
 INSERT INTO business_hour(id, place_id, type, weekday, start_time, end_time) VALUES (1, 1, 'STADIUM', 1, '08:00', '17:00');
 INSERT INTO business_hour(id, place_id, type, weekday, start_time, end_time) VALUES (2, 1, 'STADIUM', 2, '08:00', '17:00');
 INSERT INTO business_hour(id, place_id, type, weekday, start_time, end_time) VALUES (3, 1, 'STADIUM', 3, '08:00', '17:00');
 INSERT INTO business_hour(id, place_id, type, weekday, start_time, end_time) VALUES (4, 1, 'STADIUM', 4, '08:00', '17:00');
 INSERT INTO business_hour(id, place_id, type, weekday, start_time, end_time) VALUES (5, 1, 'STADIUM', 5, '08:00', '17:00');
 
+INSERT INTO business_hour(id, place_id, type, weekday, start_time, end_time) VALUES (6, 1, 'VENUE', 1, '08:00', '17:00');
+INSERT INTO business_hour(id, place_id, type, weekday, start_time, end_time) VALUES (7, 1, 'VENUE', 2, '08:00', '17:00');
+INSERT INTO business_hour(id, place_id, type, weekday, start_time, end_time) VALUES (8, 1, 'VENUE', 3, '08:00', '17:00');
+INSERT INTO business_hour(id, place_id, type, weekday, start_time, end_time) VALUES (9, 1, 'VENUE', 4, '08:00', '17:00');
+INSERT INTO business_hour(id, place_id, type, weekday, start_time, end_time) VALUES (10, 1, 'VENUE', 5, '08:00', '17:00');
+
+INSERT INTO reservation(id, stadium_id, venue_id, court_id, start_time, end_time, member_count, vacancy, technical_level, remark, invitation_code, is_cancelled)
+                VALUES (1, 1, 1, 1, '2023-11-19 00:00:00', '2023-11-19 23:59:59', 1, 1, '{"ADVANCED"}', '', 'qwer', False);
