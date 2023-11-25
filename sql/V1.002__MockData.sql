@@ -7,6 +7,11 @@ INSERT INTO account (id, email, pass_hash, nickname, gender,
              '$argon2id$v=19$m=65536,t=3,p=4$UApBiLHWmlNqrfX+35uTEg$B2y8eFnz/IxszZVCEP+tG9gz9xBbMjG0uOqnOeYLsMA',
              'nickname', 'MALE', 'ya29.a0AfB_byCqWC0Hzdn88VVnDATcIpYXFyQ_qi9Uwjq1hZvclOaiwpCsBeCAObzoaxZy97cI7H10XHDeBDDyDF45w6rBu3_7tu-VPyFn2NLfYk1HjtIH5ZVFh7_tP1L5b6HYZSxemeGXoX8L2Z2IhwurkEQpT3l4BjjC4q3eaCgYKAX0SARASFQHGX2Mixto-HVPZEI_Pot6b9rfOhw0171',
              '1//0eYS_hlRdyIKJCgYIARAAGA4SNwF-L9IrRnSwx5cq9RqMYRxvJ-Vm-NSnXpADGtdCbfUvzt9sEt-cq7ScV6Dhrg97B24r2BTLqQc', '262b3702-1891-4e18-958e-82ebe758b0c9',
+             'NORMAL', 't', 't'),
+             (2, 'benson.wang@appier.com',
+             '$argon2id$v=19$m=65536,t=3,p=4$UApBiLHWmlNqrfX+35uTEg$B2y8eFnz/IxszZVCEP+tG9gz9xBbMjG0uOqnOeYLsMA',
+             'nickname', 'MALE', 'ya29.a0AfB_byCqWC0Hzdn88VVnDATcIpYXFyQ_qi9Uwjq1hZvclOaiwpCsBeCAObzoaxZy97cI7H10XHDeBDDyDF45w6rBu3_7tu-VPyFn2NLfYk1HjtIH5ZVFh7_tP1L5b6HYZSxemeGXoX8L2Z2IhwurkEQpT3l4BjjC4q3eaCgYKAX0SARASFQHGX2Mixto-HVPZEI_Pot6b9rfOhw0171',
+             '1//0eYS_hlRdyIKJCgYIARAAGA4SNwF-L9IrRnSwx5cq9RqMYRxvJ-Vm-NSnXpADGtdCbfUvzt9sEt-cq7ScV6Dhrg97B24r2BTLqQc', '262b3702-1891-4e18-958e-82ebe758b0c9',
              'NORMAL', 't', 't');
 
 INSERT INTO city(id, name) VALUES (1, '台北市');
@@ -36,3 +41,5 @@ INSERT INTO business_hour(id, place_id, type, weekday, start_time, end_time) VAL
 
 INSERT INTO reservation(id, stadium_id, venue_id, court_id, start_time, end_time, member_count, vacancy, technical_level, remark, invitation_code, is_cancelled)
                 VALUES (1, 1, 1, 1, '2023-11-19 00:00:00', '2023-11-19 23:59:59', 1, 1, '{"ADVANCED"}', '', 'qwer', False);
+
+INSERT INTO reservation_member(reservation_id, account_id, is_manager, is_joined) VALUES (1, 1, True, True);
