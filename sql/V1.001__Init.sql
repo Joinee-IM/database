@@ -39,7 +39,7 @@ CREATE TABLE account
 (
     id              SERIAL PRIMARY KEY,
     email           VARCHAR UNIQUE NOT NULL,
-    pass_hash       VARCHAR        NOT NULL,
+    pass_hash       VARCHAR,
     nickname        VARCHAR,
     gender          gender_type    NOT NULL,
     access_token    VARCHAR,
