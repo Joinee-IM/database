@@ -147,6 +147,26 @@ INSERT INTO court (id, venue_id)
                (36, 10);
 
 INSERT INTO reservation(id, stadium_id, venue_id, court_id, start_time, end_time, member_count, vacancy, technical_level, remark, invitation_code, is_cancelled)
-     VALUES (1, 1, 1, 1, '2023-11-19 00:00:00', '2023-11-19 23:59:59', 1, 1, '{"ADVANCED"}', '', 'qwer', False);
+     VALUES (1, 1, 1, 1, '2023-12-22 10:00:00', '2023-12-22 12:00:00', 1, 1, '{"ADVANCED"}', '一起高手過招吧。', 'qwer', False),
+               (2, 1, 1, 2, '2023-12-23 08:20:00', '2023-12-23 11:20:00', 2, 2, '{"INTERMEDIATE"}', '成為強者的路上我需要你們跟我們一起！', 'absd', False),
+               (3, 1, 1, 3, '2023-12-24 16:00:00', '2023-12-24 18:00:00', 2, 2, '{"INTERMEDIATE"}', '運動身體好！', 'dcfe', False),
+               (4, 1, 2, 4, '2023-12-25 13:00:00', '2023-12-25 14:00:00', 2, 2, '{"ENTRY"}', '新手輕鬆打！', 'veot', False),
+               (5, 1, 2, 5, '2023-12-26 16:00:00', '2023-12-26 17:00:00', 1, 1, '{"ENTRY"}', '歡迎加入科技業上班族的休閒活動！', 'thrt', False),
+               (6, 1, 2, 6, '2023-12-27 11:00:00', '2023-12-27 13:00:00', 1, 1, '{"ENTRY"}', '希望可以找到新手夥伴一起練習。', 'wrfc', False),
+               (7, 1, 3, 2, '2023-12-25 16:00:00', '2023-12-25 17:00:00', 2, 0, '{}', '', '', True),
+               (8, 1, 4, 1, '2023-12-22 11:00:00', '2023-12-22 13:00:00', 2, 0, '{}', '', '', True);
 
-INSERT INTO reservation_member(reservation_id, account_id, is_manager, is_joined) VALUES (1, 1, True, True);
+INSERT INTO reservation_member(reservation_id, account_id, is_manager, is_joined)
+     VALUES (1, 1, True, True),
+               (2, 1, True, True),
+               (2, 2, False, True),
+               (3, 1, True, True),
+               (3, 2, False, True),
+               (4, 1, False, True),
+               (4, 2, True, True),
+               (5, 2, True, True),
+               (6, 2, True, True),
+               (7, 1, False, True),
+               (7, 2, True, True),
+               (8, 1, False, True),
+               (8, 2, True, True);
