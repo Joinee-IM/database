@@ -148,15 +148,17 @@ CREATE TABLE reservation
     technical_level technical_type ARRAY NOT NULL,
     remark          VARCHAR,
     invitation_code VARCHAR              NOT NULL,
-    is_cancelled    BOOLEAN DEFAULT FALSE
+    is_cancelled    BOOLEAN DEFAULT FALSE,
+    google_event_id VARCHAR
 );
 
 CREATE TABLE reservation_member
 (
-    reservation_id SERIAL REFERENCES reservation (id),
+    reservation_id SERIAL REFERENCES reservation (id) ,
     account_id     INTEGER REFERENCES account (id),
     is_manager     BOOLEAN DEFAULT FALSE,
-    is_joined      BOOLEAN DEFAULT FALSE
+    is_joined      BOOLEAN DEFAULT FALSE,
+    PRIMARY KEY (reservation_id, account_id)
 );
 
 CREATE TABLE ban_record
