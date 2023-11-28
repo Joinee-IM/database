@@ -85,7 +85,8 @@ CREATE TABLE stadium
     contact_number VARCHAR,
     description    TEXT,
     long           FLOAT   NOT NULL,
-    lat            FLOAT   NOT NULL
+    lat            FLOAT   NOT NULL,
+    is_published   BOOLEAN DEFAULT TRUE
 );
 
 CREATE TABLE venue
@@ -106,7 +107,8 @@ CREATE TABLE venue
     facilities           VARCHAR,
     court_count          INTEGER NOT NULL,
     court_type           VARCHAR NOT NULL, -- 小單位的單位（e.g. 桌/網)
-    sport_id             INTEGER NOT NULL REFERENCES sport (id)
+    sport_id             INTEGER NOT NULL REFERENCES sport (id),
+    is_published         BOOLEAN DEFAULT TRUE
 );
 
 CREATE TABLE business_hour
@@ -131,8 +133,9 @@ CREATE TABLE album
 
 CREATE TABLE court
 ( -- 球場
-    id       SERIAL PRIMARY KEY,
-    venue_id INTEGER NOT NULL REFERENCES venue (id)
+    id            SERIAL PRIMARY KEY,
+    venue_id      INTEGER NOT NULL REFERENCES venue (id),
+    is_published  BOOLEAN DEFAULT TRUE
 );
 
 CREATE TABLE reservation
