@@ -157,7 +157,7 @@ CREATE TABLE reservation
 
 CREATE TABLE reservation_member
 (
-    reservation_id SERIAL REFERENCES reservation (id) ,
+    reservation_id INTEGER REFERENCES reservation (id) ,
     account_id     INTEGER REFERENCES account (id),
     is_manager     BOOLEAN DEFAULT FALSE,
     is_joined      BOOLEAN DEFAULT FALSE,
