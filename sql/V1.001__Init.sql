@@ -82,6 +82,7 @@ CREATE TABLE stadium
     id             SERIAL PRIMARY KEY,
     name           VARCHAR NOT NULL,
     district_id    INTEGER NOT NULL REFERENCES district (id),
+    owner_id       INTEGER NOT NULL REFERENCES account(id),
     contact_number VARCHAR,
     description    TEXT,
     long           FLOAT   NOT NULL,
