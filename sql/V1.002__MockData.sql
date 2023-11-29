@@ -46,7 +46,7 @@ INSERT INTO district(id, city_id, name)
      VALUES (1, 1, '大安區'),
                (2, 1, '中正區');
 
-INSERT INTO stadium (id, name, district_id, owner_id, address, contact_number, description, long, lat, w)
+INSERT INTO stadium (id, name, district_id, owner_id, address, contact_number, description, long, lat)
      VALUES (1, '臺大體育館', 1, 3, '臺北市大安區羅斯福路四段 1 號', '02-27618235', '歡迎你來這邊運動，我們這邊應有盡有，快來這邊大顯身手，羽球與桌球健將們。', 25.02269, 121.53511),
                (2, '師大體育館', 1,  3, '臺北市大安區和平東路一段 162 號', '02-28892345', '歡迎光臨師大體育館', 121.5396717, 25.0341596),
                (3, '師大附中運動中心', 1,  3, '臺北市大安區信義路三段 143 號', '02-21112345', '附中附中我們的搖籃。', 121.5265655, 25.0258941),
