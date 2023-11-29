@@ -83,6 +83,7 @@ CREATE TABLE stadium
     name           VARCHAR NOT NULL,
     district_id    INTEGER NOT NULL REFERENCES district (id),
     owner_id       INTEGER NOT NULL REFERENCES account(id),
+    address        VARCHAR NOT NULL,
     contact_number VARCHAR,
     description    TEXT,
     long           FLOAT   NOT NULL,
