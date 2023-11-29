@@ -82,10 +82,13 @@ CREATE TABLE stadium
     id             SERIAL PRIMARY KEY,
     name           VARCHAR NOT NULL,
     district_id    INTEGER NOT NULL REFERENCES district (id),
+    owner_id       INTEGER NOT NULL REFERENCES account(id),
+    address        VARCHAR NOT NULL,
     contact_number VARCHAR,
     description    TEXT,
     long           FLOAT   NOT NULL, --經度
-    lat            FLOAT   NOT NULL --緯度
+    lat            FLOAT   NOT NULL, --經度
+    is_published   BOOLEAN DEFAULT TRUE
 );
 
 CREATE TABLE venue
@@ -106,7 +109,8 @@ CREATE TABLE venue
     facilities           VARCHAR,
     court_count          INTEGER NOT NULL,
     court_type           VARCHAR NOT NULL, -- 小單位的單位（e.g. 桌/網)
-    sport_id             INTEGER NOT NULL REFERENCES sport (id)
+    sport_id             INTEGER NOT NULL REFERENCES sport (id),
+    is_published         BOOLEAN DEFAULT TRUE
 );
 
 CREATE TABLE business_hour
@@ -131,8 +135,9 @@ CREATE TABLE album
 
 CREATE TABLE court
 ( -- 球場
-    id       SERIAL PRIMARY KEY,
-    venue_id INTEGER NOT NULL REFERENCES venue (id)
+    id            SERIAL PRIMARY KEY,
+    venue_id      INTEGER NOT NULL REFERENCES venue (id),
+    is_published  BOOLEAN DEFAULT TRUE
 );
 
 CREATE TABLE reservation
@@ -148,15 +153,17 @@ CREATE TABLE reservation
     technical_level technical_type ARRAY NOT NULL,
     remark          VARCHAR,
     invitation_code VARCHAR              NOT NULL,
-    is_cancelled    BOOLEAN DEFAULT FALSE
+    is_cancelled    BOOLEAN DEFAULT FALSE,
+    google_event_id VARCHAR
 );
 
 CREATE TABLE reservation_member
 (
-    reservation_id SERIAL REFERENCES reservation (id),
+    reservation_id INTEGER REFERENCES reservation (id) ,
     account_id     INTEGER REFERENCES account (id),
     is_manager     BOOLEAN DEFAULT FALSE,
-    is_joined      BOOLEAN DEFAULT FALSE
+    is_joined      BOOLEAN DEFAULT FALSE,
+    PRIMARY KEY (reservation_id, account_id)
 );
 
 CREATE TABLE ban_record
