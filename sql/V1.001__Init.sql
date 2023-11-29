@@ -84,8 +84,8 @@ CREATE TABLE stadium
     district_id    INTEGER NOT NULL REFERENCES district (id),
     contact_number VARCHAR,
     description    TEXT,
-    long           FLOAT   NOT NULL,
-    lat            FLOAT   NOT NULL
+    long           FLOAT   NOT NULL, --經度
+    lat            FLOAT   NOT NULL --緯度
 );
 
 CREATE TABLE venue
