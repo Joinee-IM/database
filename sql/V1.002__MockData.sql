@@ -41,17 +41,17 @@ INSERT INTO account (id, email, pass_hash, nickname, gender,
 
 INSERT INTO sport(id, name) VALUES (1, '桌球'), (2, '羽球'), (3, '壁球'), (4, '柔道'), (5, '舞蹈');
 
-INSERT INTO city(id, name) VALUES (1, '台北市');
+INSERT INTO city(id, name) VALUES (1, '臺北市');
 INSERT INTO district(id, city_id, name)
      VALUES (1, 1, '大安區'),
                (2, 1, '中正區');
 
-INSERT INTO stadium (id, name, district_id, contact_number, description, long, lat, owner_id, address)
-     VALUES (1, '臺大體育館', 1, '02-27618235', '歡迎你來這邊運動，我們這邊應有盡有，快來這邊大顯身手，羽球與桌球健將們。', 25.02269, 121.53511, 3, '地址'),
-               (2, '師大體育館', 1, '02-28892345', '歡迎光臨師大體育館', 25.0341596, 121.5396717, 3, '地址'),
-               (3, '師大附中運動中心', 1, '02-21112345', '附中附中我們的搖籃。', 25.0258941, 121.5265655, 3, '地址'),
-               (4, '成功高中綜合體育館', 2, '02-26849593', '革命尚未成功，同志仍需運動', 25.0432149, 121.5230202, 3, '地址'),
-               (5, '臺大醫學院體育館', 2, '02-23141592', '一天一運動，醫生遠離我。', 25.00406279, 121.5213491, 3, '地址');
+INSERT INTO stadium (id, name, district_id, owner_id, address, contact_number, description, long, lat)
+     VALUES (1, '臺大體育館', 1, 3, '臺北市大安區羅斯福路四段 1 號', '02-27618235', '歡迎你來這邊運動，我們這邊應有盡有，快來這邊大顯身手，羽球與桌球健將們。', 25.02269, 121.53511),
+               (2, '師大體育館', 1,  3, '臺北市大安區和平東路一段 162 號', '02-28892345', '歡迎光臨師大體育館', 121.5396717, 25.0341596),
+               (3, '師大附中運動中心', 1,  3, '臺北市大安區信義路三段 143 號', '02-21112345', '附中附中我們的搖籃。', 121.5265655, 25.0258941),
+               (4, '成功高中綜合體育館', 2,  3, '臺北市中正區濟南路一段 71 號', '02-26849593', '革命尚未成功，同志仍需運動', 121.5230202, 25.0432149),
+               (5, '臺大醫學院體育館', 2,  3, '臺北市中正區仁愛路一段 1 號', '02-23141592', '一天一運動，醫生遠離我。', 121.5213491, 25.00406279);
 
 INSERT INTO venue (id, stadium_id, name, floor, reservation_interval, is_reservable, is_chargeable, fee_rate, fee_type, area, current_user_count, capability, sport_equipments, facilities, court_count, court_type, sport_id)
      VALUES (1, 2, 'B109 桌球室', '3', 3, 't', 't', 1, 'PER_HOUR', 35, 103, 300, '桌球拍、桌球', '桌球桌、電梯、空調、淋浴室、飲水機、自動體外心臟電擊去顫器、桌球電動計分板、無障礙電梯 1 座、無障礙廁所 2 座', 8, '場', 1),

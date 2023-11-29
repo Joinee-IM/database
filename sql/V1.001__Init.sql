@@ -86,8 +86,8 @@ CREATE TABLE stadium
     address        VARCHAR NOT NULL,
     contact_number VARCHAR,
     description    TEXT,
-    long           FLOAT   NOT NULL,
-    lat            FLOAT   NOT NULL,
+    long           FLOAT   NOT NULL, --經度
+    lat            FLOAT   NOT NULL, --經度
     is_published   BOOLEAN DEFAULT TRUE
 );
 
