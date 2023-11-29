@@ -18,7 +18,10 @@ INSERT INTO gcs_file (file_uuid, bucket, key, filename)
                ('412ad0f9-47d5-41fb-8e13-590140f2bf50', 'cloud-native-storage-db', '412ad0f9-47d5-41fb-8e13-590140f2bf50', '412ad0f9-47d5-41fb-8e13-590140f2bf50'),
                ('e8f12c04-90ae-4732-b3a3-3fee7c2a59ea', 'cloud-native-storage-db', 'e8f12c04-90ae-4732-b3a3-3fee7c2a59ea', 'e8f12c04-90ae-4732-b3a3-3fee7c2a59ea'),
                ('8314f6ee-203d-4ccf-bd3e-6347b5d66bae', 'cloud-native-storage-db', '8314f6ee-203d-4ccf-bd3e-6347b5d66bae', '8314f6ee-203d-4ccf-bd3e-6347b5d66bae'),
-               ('74458476-5fb2-4965-a5b4-717305899982', 'cloud-native-storage-db', '74458476-5fb2-4965-a5b4-717305899982', '74458476-5fb2-4965-a5b4-717305899982');
+               ('74458476-5fb2-4965-a5b4-717305899982', 'cloud-native-storage-db', '74458476-5fb2-4965-a5b4-717305899982', '74458476-5fb2-4965-a5b4-717305899982'),
+               ('ce8b9701-1fdd-445a-8016-36818bc4e5b8', 'cloud-native-storage-db', 'ce8b9701-1fdd-445a-8016-36818bc4e5b8', 'ce8b9701-1fdd-445a-8016-36818bc4e5b8'),
+               ('867cc079-c937-4a38-b7b4-5dc21a0fe4eb', 'cloud-native-storage-db', '867cc079-c937-4a38-b7b4-5dc21a0fe4eb', '867cc079-c937-4a38-b7b4-5dc21a0fe4eb'),
+               ('9a3ca6e1-2b20-4ea4-8ed0-345e9f076987', 'cloud-native-storage-db', '9a3ca6e1-2b20-4ea4-8ed0-345e9f076987', '9a3ca6e1-2b20-4ea4-8ed0-345e9f076987');
 
 INSERT INTO account (id, email, pass_hash, nickname, gender,
                      access_token, refresh_token, image_uuid, role, is_verified, is_google_login)
@@ -44,14 +47,19 @@ INSERT INTO sport(id, name) VALUES (1, '桌球'), (2, '羽球'), (3, '壁球'), 
 INSERT INTO city(id, name) VALUES (1, '臺北市');
 INSERT INTO district(id, city_id, name)
      VALUES (1, 1, '大安區'),
-               (2, 1, '中正區');
+               (2, 1, '中正區'),
+               (3, 1, '內湖區'),
+               (4, 1, '松山區');
 
 INSERT INTO stadium (id, name, district_id, owner_id, address, contact_number, description, long, lat)
      VALUES (1, '臺大體育館', 1, 3, '臺北市大安區羅斯福路四段 1 號', '02-27618235', '歡迎你來這邊運動，我們這邊應有盡有，快來這邊大顯身手，羽球與桌球健將們。', 121.53511, 25.02269),
                (2, '師大體育館', 1,  3, '臺北市大安區和平東路一段 162 號', '02-28892345', '歡迎光臨師大體育館', 121.5396717, 25.0341596),
                (3, '師大附中運動中心', 1,  3, '臺北市大安區信義路三段 143 號', '02-21112345', '附中附中我們的搖籃。', 121.5265655, 25.0258941),
                (4, '成功高中綜合體育館', 2,  3, '臺北市中正區濟南路一段 71 號', '02-26849593', '革命尚未成功，同志仍需運動', 121.5230202, 25.0432149),
-               (5, '臺大醫學院體育館', 2,  3, '臺北市中正區仁愛路一段 1 號', '02-23141592', '一天一運動，醫生遠離我。', 121.5213491, 25.00406279);
+               (5, '臺大醫學院體育館', 2,  3, '臺北市中正區仁愛路一段 1 號', '02-21218543', '一天一運動，醫生遠離我。', 121.5213491, 25.00406279),
+               (6, '內湖運動中心', 3,  3, '臺北市內湖區洲子街 12 號', '02-23141592', '老少咸宜，歡迎光臨', 121.57471, 25.07901),
+               (7, '國防醫學院體育館', 3,  3, '臺北市內湖區民權東路六段 161 號', '02-27512563', '求精求嚴，從難從實', 121.59642, 25.07314),
+               (8, '臺北體育館', 4,  3, '臺北市松山區南京東路四段 10 號', '02-26844238', '開放給全體市民朋友的頂級體育館', 121.55164, 25.05266);
 
 INSERT INTO venue (id, stadium_id, name, floor, reservation_interval, is_reservable, is_chargeable, fee_rate, fee_type, area, current_user_count, capability, sport_equipments, facilities, court_count, court_type, sport_id)
      VALUES (1, 2, 'B109 桌球室', '3', 3, 't', 't', 1, 'PER_HOUR', 35, 103, 300, '桌球拍、桌球', '桌球桌、電梯、空調、淋浴室、飲水機、自動體外心臟電擊去顫器、桌球電動計分板、無障礙電梯 1 座、無障礙廁所 2 座', 8, '場', 1),
@@ -90,7 +98,22 @@ INSERT INTO business_hour(id, place_id, type, weekday, start_time, end_time)
                (42, 5, 'STADIUM', 2, '08:00', '17:00'),
                (43, 5, 'STADIUM', 3, '08:00', '17:00'),
                (44, 5, 'STADIUM', 4, '08:00', '17:00'),
-               (45, 5, 'STADIUM', 5, '08:00', '17:00');
+               (45, 5, 'STADIUM', 5, '08:00', '17:00'),
+               (51, 6, 'STADIUM', 1, '08:00', '17:00'), -- days are not consecutive
+               (52, 6, 'STADIUM', 6, '08:00', '17:00'),
+               (53, 6, 'STADIUM', 3, '08:00', '17:00'),
+               (54, 6, 'STADIUM', 4, '08:00', '17:00'),
+               (55, 6, 'STADIUM', 5, '08:00', '17:00'),
+               (61, 7, 'STADIUM', 1, '08:00', '12:00'), -- two time slots for one day
+               (62, 7, 'STADIUM', 1, '13:00', '17:00'),
+               (63, 7, 'STADIUM', 3, '08:00', '17:00'),
+               (64, 7, 'STADIUM', 4, '08:00', '17:00'),
+               (65, 7, 'STADIUM', 5, '08:00', '17:00'),
+               (71, 8, 'STADIUM', 1, '08:00', '17:00'), -- every day has different time periods
+               (72, 8, 'STADIUM', 2, '10:00', '20:00'),
+               (73, 8, 'STADIUM', 3, '08:00', '17:00'),
+               (74, 8, 'STADIUM', 4, '10:00', '20:00'),
+               (75, 8, 'STADIUM', 5, '08:00', '17:00');
 
 INSERT INTO business_hour(id, place_id, type, weekday, start_time, end_time)
      VALUES (6, 1, 'VENUE', 1, '08:00', '17:00'),
@@ -138,7 +161,15 @@ INSERT INTO album(id, place_id, type, file_uuid)
                (16, 1, 'VENUE', '8314f6ee-203d-4ccf-bd3e-6347b5d66bae'),
                (17, 1, 'VENUE', '74458476-5fb2-4965-a5b4-717305899982'),
                (18, 2, 'VENUE', '6cf00eda-6e1f-4ba8-bfef-060b1b372e40'),
-               (19, 2, 'VENUE', 'aa1cd5b6-94cd-48dd-9c3b-43a8c2b654f2');
+               (19, 2, 'VENUE', 'aa1cd5b6-94cd-48dd-9c3b-43a8c2b654f2'),
+               (20, 5, 'STADIUM', '8f596f3d-5726-41ed-a089-a443cb7796d9'),
+               (21, 5, 'STADIUM', 'e8f12c04-90ae-4732-b3a3-3fee7c2a59ea'),
+               (22, 5, 'STADIUM', '2ff59073-ab5d-4261-bec8-b8316e2cc3cf'),
+               (23, 5, 'STADIUM', '4c421853-780c-4608-8ebb-309848f02285'),
+               (24, 5, 'STADIUM', '412ad0f9-47d5-41fb-8e13-590140f2bf50'),
+               (25, 6, 'STADIUM', 'ce8b9701-1fdd-445a-8016-36818bc4e5b8'),
+               (26, 7, 'STADIUM', '867cc079-c937-4a38-b7b4-5dc21a0fe4eb'),
+               (27, 8, 'STADIUM', '9a3ca6e1-2b20-4ea4-8ed0-345e9f076987');
 
 INSERT INTO court (id, venue_id)
      VALUES (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1),
