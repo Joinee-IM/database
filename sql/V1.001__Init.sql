@@ -136,6 +136,7 @@ CREATE TABLE album
 CREATE TABLE court
 ( -- 球場
     id            SERIAL PRIMARY KEY,
+    number        INTEGER NOT NULL,  -- 第幾場
     venue_id      INTEGER NOT NULL REFERENCES venue (id),
     is_published  BOOLEAN DEFAULT TRUE
 );
