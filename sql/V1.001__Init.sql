@@ -41,7 +41,7 @@ CREATE TABLE account
     email           VARCHAR UNIQUE NOT NULL,
     pass_hash       VARCHAR,
     nickname        VARCHAR,
-    gender          gender_type    NOT NULL,
+    gender          gender_type,
     access_token    VARCHAR,
     refresh_token   VARCHAR,
     image_uuid      UUID REFERENCES gcs_file (file_uuid),
