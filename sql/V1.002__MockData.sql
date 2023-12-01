@@ -61,7 +61,7 @@ INSERT INTO stadium (id, name, district_id, owner_id, address, contact_number, d
                (7, '國防醫學院體育館', 3,  3, '臺北市內湖區民權東路六段 161 號', '02-27512563', '求精求嚴，從難從實', 121.59642, 25.07314),
                (8, '臺北體育館', 4,  3, '臺北市松山區南京東路四段 10 號', '02-26844238', '開放給全體市民朋友的頂級體育館', 121.55164, 25.05266);
 
-INSERT INTO venue (id, stadium_id, name, floor, reservation_interval, is_reservable, is_chargeable, fee_rate, fee_type, area, current_user_count, capability, sport_equipments, facilities, court_count, court_type, sport_id)
+INSERT INTO venue (id, stadium_id, name, floor, reservation_interval, is_reservable, is_chargeable, fee_rate, fee_type, area, current_user_count, capacity, sport_equipments, facilities, court_count, court_type, sport_id)
      VALUES (1, 2, 'B109 桌球室', '3', 3, 't', 't', 1, 'PER_HOUR', 35, 103, 300, '桌球拍、桌球', '桌球桌、電梯、空調、淋浴室、飲水機、自動體外心臟電擊去顫器、桌球電動計分板、無障礙電梯 1 座、無障礙廁所 2 座', 8, '場', 1),
                (2, 2, '羽球場 A', '3', 3, 'f', 't', 1, 'PER_HOUR', 60, 298, 400, '羽球拍、羽毛球', '羽球網、電梯、空調、淋浴室、活動桌椅、飲水機、自動體外心臟電擊去顫器、羽球電動計分板、無障礙電梯 1 座、無障礙廁所 2 座', 6, '網', 2),
                (3, 2, '三樓主球場', '3', 3, 't', 't', 1, 'PER_HOUR', 80, 230, 500, 'sport equipment', 'facility', 3, '場', 2),

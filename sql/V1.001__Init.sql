@@ -104,7 +104,7 @@ CREATE TABLE venue
     fee_type             fee_type,
     area                 INTEGER NOT NULL,  -- 面積
     current_user_count   INTEGER DEFAULT 0, -- 目前使用人數
-    capability           INTEGER NOT NULL,
+    capacity             INTEGER NOT NULL,
     sport_equipments     VARCHAR,
     facilities           VARCHAR,
     court_count          INTEGER NOT NULL,
