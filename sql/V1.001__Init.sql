@@ -107,7 +107,6 @@ CREATE TABLE venue
     capacity             INTEGER NOT NULL,
     sport_equipments     VARCHAR,
     facilities           VARCHAR,
-    court_count          INTEGER NOT NULL,
     court_type           VARCHAR NOT NULL, -- 小單位的單位（e.g. 桌/網)
     sport_id             INTEGER NOT NULL REFERENCES sport (id),
     is_published         BOOLEAN DEFAULT TRUE
