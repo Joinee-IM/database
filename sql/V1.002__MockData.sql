@@ -1,5 +1,5 @@
 INSERT INTO gcs_file (file_uuid, bucket, key, filename) 
-     VALUES ('262b3702-1891-4e18-958e-82ebe758b0c9', 'cloud-native-storage-db', '262b3702-1891-4e18-958e-82ebe758b0c9', '262b3702-1891-4e18-958e-82ebe758b0c9'),
+     VALUES ('c6fb3f9e-c67a-4391-9afd-6e52fec77e1f', 'cloud-native-storage-db', 'c6fb3f9e-c67a-4391-9afd-6e52fec77e1f', 'c6fb3f9e-c67a-4391-9afd-6e52fec77e1f'),
                ('84828ed4-e346-442a-9ffb-814d4f4c6381', 'cloud-native-storage-db', '84828ed4-e346-442a-9ffb-814d4f4c6381', '84828ed4-e346-442a-9ffb-814d4f4c6381'),
                ('893dbdc7-5941-4990-9e1c-26e2368c934d', 'cloud-native-storage-db', '893dbdc7-5941-4990-9e1c-26e2368c934d', '893dbdc7-5941-4990-9e1c-26e2368c934d'),
                ('8a2cac6c-4e67-4a68-8a45-51cd4184d0dc', 'cloud-native-storage-db', '8a2cac6c-4e67-4a68-8a45-51cd4184d0dc', '8a2cac6c-4e67-4a68-8a45-51cd4184d0dc'),
@@ -28,17 +28,17 @@ INSERT INTO account (id, email, pass_hash, nickname, gender,
      VALUES (1, 'b09705017@ntu.im',
              '$argon2id$v=19$m=65536,t=3,p=4$UApBiLHWmlNqrfX+35uTEg$B2y8eFnz/IxszZVCEP+tG9gz9xBbMjG0uOqnOeYLsMA',
              'nickname', 'MALE', 'ya29.a0AfB_byCqWC0Hzdn88VVnDATcIpYXFyQ_qi9Uwjq1hZvclOaiwpCsBeCAObzoaxZy97cI7H10XHDeBDDyDF45w6rBu3_7tu-VPyFn2NLfYk1HjtIH5ZVFh7_tP1L5b6HYZSxemeGXoX8L2Z2IhwurkEQpT3l4BjjC4q3eaCgYKAX0SARASFQHGX2Mixto-HVPZEI_Pot6b9rfOhw0171',
-             '1//0eYS_hlRdyIKJCgYIARAAGA4SNwF-L9IrRnSwx5cq9RqMYRxvJ-Vm-NSnXpADGtdCbfUvzt9sEt-cq7ScV6Dhrg97B24r2BTLqQc', '262b3702-1891-4e18-958e-82ebe758b0c9',
+             '1//0eYS_hlRdyIKJCgYIARAAGA4SNwF-L9IrRnSwx5cq9RqMYRxvJ-Vm-NSnXpADGtdCbfUvzt9sEt-cq7ScV6Dhrg97B24r2BTLqQc', 'c6fb3f9e-c67a-4391-9afd-6e52fec77e1f',
              'NORMAL', 't', 't'),
              (2, 'benson.wang@appier.com',
              '$argon2id$v=19$m=65536,t=3,p=4$UApBiLHWmlNqrfX+35uTEg$B2y8eFnz/IxszZVCEP+tG9gz9xBbMjG0uOqnOeYLsMA',
              'nickname', 'MALE', 'ya29.a0AfB_byCqWC0Hzdn88VVnDATcIpYXFyQ_qi9Uwjq1hZvclOaiwpCsBeCAObzoaxZy97cI7H10XHDeBDDyDF45w6rBu3_7tu-VPyFn2NLfYk1HjtIH5ZVFh7_tP1L5b6HYZSxemeGXoX8L2Z2IhwurkEQpT3l4BjjC4q3eaCgYKAX0SARASFQHGX2Mixto-HVPZEI_Pot6b9rfOhw0171',
-             '1//0eYS_hlRdyIKJCgYIARAAGA4SNwF-L9IrRnSwx5cq9RqMYRxvJ-Vm-NSnXpADGtdCbfUvzt9sEt-cq7ScV6Dhrg97B24r2BTLqQc', '262b3702-1891-4e18-958e-82ebe758b0c9',
+             '1//0eYS_hlRdyIKJCgYIARAAGA4SNwF-L9IrRnSwx5cq9RqMYRxvJ-Vm-NSnXpADGtdCbfUvzt9sEt-cq7ScV6Dhrg97B24r2BTLqQc', 'c6fb3f9e-c67a-4391-9afd-6e52fec77e1f',
              'NORMAL', 't', 't'),
              (3, 'am8liu@ntu.im',
              '$argon2id$v=19$m=65536,t=3,p=4$UApBiLHWmlNqrfX+35uTEg$B2y8eFnz/IxszZVCEP+tG9gz9xBbMjG0uOqnOeYLsMA',
              'nickname', 'FEMALE', 'ya29.a0AfB_byCqWC0Hzdn88VVnDATcIpYXFyQ_qi9Uwjq1hZvclOaiwpCsBeCAObzoaxZy97cI7H10XHDeBDDyDF45w6rBu3_7tu-VPyFn2NLfYk1HjtIH5ZVFh7_tP1L5b6HYZSxemeGXoX8L2Z2IhwurkEQpT3l4BjjC4q3eaCgYKAX0SARASFQHGX2Mixto-HVPZEI_Pot6b9rfOhw0171',
-             '1//0eYS_hlRdyIKJCgYIARAAGA4SNwF-L9IrRnSwx5cq9RqMYRxvJ-Vm-NSnXpADGtdCbfUvzt9sEt-cq7ScV6Dhrg97B24r2BTLqQc', '262b3702-1891-4e18-958e-82ebe758b0c9',
+             '1//0eYS_hlRdyIKJCgYIARAAGA4SNwF-L9IrRnSwx5cq9RqMYRxvJ-Vm-NSnXpADGtdCbfUvzt9sEt-cq7ScV6Dhrg97B24r2BTLqQc', 'c6fb3f9e-c67a-4391-9afd-6e52fec77e1f',
              'PROVIDER', 't', 't');
 
 
