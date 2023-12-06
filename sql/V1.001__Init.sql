@@ -34,6 +34,17 @@ CREATE TYPE role_type AS ENUM (
     'NORMAL'
 );
 
+CREATE TYPE reservation_member_status AS ENUM (
+    'JOINED',
+    'INVITED',
+    'REJECTED'
+);
+
+CREATE TYPE reservation_member_source AS ENUM (
+    'SEARCH',
+    'INVITATION_CODE'
+);
+
 
 CREATE TABLE account
 (
@@ -162,7 +173,8 @@ CREATE TABLE reservation_member
     reservation_id INTEGER REFERENCES reservation (id) ,
     account_id     INTEGER REFERENCES account (id),
     is_manager     BOOLEAN DEFAULT FALSE,
-    is_joined      BOOLEAN DEFAULT FALSE,
+    status         reservation_member_status DEFAULT 'INVITED',
+    source         reservation_member_source DEFAULT 'INVITATION_CODE',
     PRIMARY KEY (reservation_id, account_id)
 );
 
