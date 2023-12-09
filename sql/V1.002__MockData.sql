@@ -193,17 +193,17 @@ INSERT INTO reservation(id, stadium_id, venue_id, court_id, start_time, end_time
                (7, 1, 3, 2, '2023-12-25 16:00:00', '2023-12-25 17:00:00', 2, 0, '{}', '', '', True),
                (8, 1, 4, 1, '2023-12-22 11:00:00', '2023-12-22 13:00:00', 2, 0, '{}', '', '', True);
 
-INSERT INTO reservation_member(reservation_id, account_id, is_manager, is_joined)
-     VALUES (1, 1, True, True),
-               (2, 1, True, True),
-               (2, 2, False, True),
-               (3, 1, True, True),
-               (3, 2, False, True),
-               (4, 1, False, True),
-               (4, 2, True, True),
-               (5, 2, True, True),
-               (6, 2, True, True),
-               (7, 1, False, True),
-               (7, 2, True, True),
-               (8, 1, False, True),
-               (8, 2, True, True);
+INSERT INTO reservation_member(reservation_id, account_id, is_manager, status)
+     VALUES (1, 1, True, 'JOINED'),
+               (2, 1, True, 'JOINED'),
+               (2, 2, False, 'JOINED'),
+               (3, 1, True, 'JOINED'),
+               (3, 2, False, 'JOINED'),
+               (4, 1, False, 'JOINED'),
+               (4, 2, True, 'JOINED'),
+               (5, 2, True, 'JOINED'),
+               (6, 2, True, 'JOINED'),
+               (7, 1, False, 'JOINED'),
+               (7, 2, True, 'JOINED'),
+               (8, 1, False, 'JOINED'),
+               (8, 2, True, 'JOINED');
