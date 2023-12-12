@@ -21,3 +21,6 @@ shell:
 
 logs:
 	docker logs cloud-native-db
+
+check:
+	@docker exec -it cloud-native-db pg_isready

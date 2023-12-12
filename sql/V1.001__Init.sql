@@ -34,6 +34,17 @@ CREATE TYPE role_type AS ENUM (
     'NORMAL'
 );
 
+CREATE TYPE reservation_member_status AS ENUM (
+    'JOINED',
+    'INVITED',
+    'REJECTED'
+);
+
+CREATE TYPE reservation_member_source AS ENUM (
+    'SEARCH',
+    'INVITATION_CODE'
+);
+
 
 CREATE TABLE account
 (
@@ -41,7 +52,7 @@ CREATE TABLE account
     email           VARCHAR UNIQUE NOT NULL,
     pass_hash       VARCHAR,
     nickname        VARCHAR,
-    gender          gender_type    NOT NULL,
+    gender          gender_type,
     access_token    VARCHAR,
     refresh_token   VARCHAR,
     image_uuid      UUID REFERENCES gcs_file (file_uuid),
@@ -104,10 +115,9 @@ CREATE TABLE venue
     fee_type             fee_type,
     area                 INTEGER NOT NULL,  -- 面積
     current_user_count   INTEGER DEFAULT 0, -- 目前使用人數
-    capability           INTEGER NOT NULL,
+    capacity             INTEGER NOT NULL,
     sport_equipments     VARCHAR,
     facilities           VARCHAR,
-    court_count          INTEGER NOT NULL,
     court_type           VARCHAR NOT NULL, -- 小單位的單位（e.g. 桌/網)
     sport_id             INTEGER NOT NULL REFERENCES sport (id),
     is_published         BOOLEAN DEFAULT TRUE
@@ -136,6 +146,7 @@ CREATE TABLE album
 CREATE TABLE court
 ( -- 球場
     id            SERIAL PRIMARY KEY,
+    number        INTEGER NOT NULL,  -- 第幾場
     venue_id      INTEGER NOT NULL REFERENCES venue (id),
     is_published  BOOLEAN DEFAULT TRUE
 );
@@ -162,7 +173,8 @@ CREATE TABLE reservation_member
     reservation_id INTEGER REFERENCES reservation (id) ,
     account_id     INTEGER REFERENCES account (id),
     is_manager     BOOLEAN DEFAULT FALSE,
-    is_joined      BOOLEAN DEFAULT FALSE,
+    status         reservation_member_status DEFAULT 'INVITED',
+    source         reservation_member_source DEFAULT 'INVITATION_CODE',
     PRIMARY KEY (reservation_id, account_id)
 );
 
