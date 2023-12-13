@@ -62,16 +62,16 @@ INSERT INTO stadium (id, name, district_id, owner_id, address, contact_number, d
                (8, '臺北體育館', 4,  3, '臺北市松山區南京東路四段 10 號', '02-26844238', '開放給全體市民朋友的頂級體育館', 121.55164, 25.05266);
 
 INSERT INTO venue (id, stadium_id, name, floor, reservation_interval, is_reservable, is_chargeable, fee_rate, fee_type, area, current_user_count, capacity, sport_equipments, facilities, court_type, sport_id)
-     VALUES (1, 2, 'B109 桌球室', '3', 3, 't', 't', 1, 'PER_HOUR', 35, 103, 300, '桌球拍、桌球', '桌球桌、電梯、空調、淋浴室、飲水機、自動體外心臟電擊去顫器、桌球電動計分板、無障礙電梯 1 座、無障礙廁所 2 座', '場', 1),
-               (2, 2, '羽球場 A', '3', 3, 'f', 't', 1, 'PER_HOUR', 60, 298, 400, '羽球拍、羽毛球', '羽球網、電梯、空調、淋浴室、活動桌椅、飲水機、自動體外心臟電擊去顫器、羽球電動計分板、無障礙電梯 1 座、無障礙廁所 2 座', '網', 2),
-               (3, 2, '三樓主球場', '3', 3, 't', 't', 1, 'PER_HOUR', 80, 230, 500, 'sport equipment', 'facility', '場', 2),
-               (4, 2, 'B127 桌球室', '3', 3, 't', 't', 1, 'PER_HOUR', 20, 110, 440, 'sport equipment', 'facility', '場', 1),
-               (5, 2, '柔道室', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 156, 220, 'sport equipment', 'facility', '場', 4),
-               (6, 2, '壁球室', '3', 3, 't', 't', 1, 'PER_HOUR', 35, 10, 300, 'sport equipment', 'facility', '場', 3),
-               (7, 2, '技擊室', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 120, 100, 'sport equipment', 'facility', '場', 5),
-               (8, 2, '小桌球室', '3', 3, 't', 't', 1, 'PER_HOUR', 35, 30, 100, 'sport equipment', 'facility', '場', 1),
-               (9, 2, '羽球場 B', '3', 3, 't', 't', 1, 'PER_HOUR', 55, 10, 100, 'sport equipment', 'facility', '場', 2),
-               (10, 2, '韻律教室', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', '場', 5);
+     VALUES (1, 1, 'B109 桌球室', '3', 3, 't', 't', 1, 'PER_HOUR', 35, 103, 300, '桌球拍、桌球', '桌球桌、電梯、空調、淋浴室、飲水機、自動體外心臟電擊去顫器、桌球電動計分板、無障礙電梯 1 座、無障礙廁所 2 座', '場', 1),
+               (2, 1, '羽球場 A', '3', 3, 'f', 't', 1, 'PER_HOUR', 60, 298, 400, '羽球拍、羽毛球', '羽球網、電梯、空調、淋浴室、活動桌椅、飲水機、自動體外心臟電擊去顫器、羽球電動計分板、無障礙電梯 1 座、無障礙廁所 2 座', '網', 2),
+               (3, 1, '三樓主球場', '3', 3, 't', 't', 1, 'PER_HOUR', 80, 230, 500, 'sport equipment', 'facility', '場', 2),
+               (4, 1, 'B127 桌球室', '3', 3, 't', 't', 1, 'PER_HOUR', 20, 110, 440, 'sport equipment', 'facility', '場', 1),
+               (5, 1, '柔道室', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 156, 220, 'sport equipment', 'facility', '場', 4),
+               (6, 1, '壁球室', '3', 3, 't', 't', 1, 'PER_HOUR', 35, 10, 300, 'sport equipment', 'facility', '場', 3),
+               (7, 1, '技擊室', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 120, 100, 'sport equipment', 'facility', '場', 5),
+               (8, 1, '小桌球室', '3', 3, 't', 't', 1, 'PER_HOUR', 35, 30, 100, 'sport equipment', 'facility', '場', 1),
+               (9, 1, '羽球場 B', '3', 3, 't', 't', 1, 'PER_HOUR', 55, 10, 100, 'sport equipment', 'facility', '場', 2),
+               (10, 1, '韻律教室', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', '場', 5);
 
 INSERT INTO business_hour(id, place_id, type, weekday, start_time, end_time)
      VALUES (1, 1, 'STADIUM', 1, '08:00', '17:00'),
@@ -185,14 +185,14 @@ INSERT INTO court (id, venue_id, number)
 
 INSERT INTO reservation
             (id, stadium_id, venue_id, court_id, start_time, end_time, member_count, vacancy, technical_level, remark, invitation_code, is_cancelled)
-     VALUES (1, 2, 1, 1, '2023-12-22 10:00:00', '2023-12-22 12:00:00', 1, 1, '{"ADVANCED"}', '一起高手過招吧。', 'qwer', False),
-            (2, 2, 1, 2, '2023-12-23 08:20:00', '2023-12-23 11:20:00', 2, 2, '{"INTERMEDIATE"}', '成為強者的路上我需要你們跟我們一起！', 'absd', False),
-            (3, 2, 1, 3, '2023-12-24 16:00:00', '2023-12-24 18:00:00', 2, 2, '{"INTERMEDIATE"}', '運動身體好！', 'dcfe', False),
-            (4, 2, 1, 4, '2023-12-25 13:00:00', '2023-12-25 14:00:00', 2, 2, '{"ENTRY"}', '新手輕鬆打！', 'veot', False),
-            (5, 2, 2, 9, '2023-12-26 16:00:00', '2023-12-26 17:00:00', 1, 1, '{"ENTRY"}', '歡迎加入科技業上班族的休閒活動！', 'thrt', False),
-            (6, 2, 3, 15, '2023-12-27 11:00:00', '2023-12-27 13:00:00', 1, 1, '{"ENTRY"}', '希望可以找到新手夥伴一起練習。', 'wrfc', False),
-            (7, 2, 1, 2, '2023-12-25 16:00:00', '2023-12-25 17:00:00', 2, 0, '{}', '', '', True),
-            (8, 2, 10, 36, '2023-12-22 11:00:00', '2023-12-22 13:00:00', 2, 0, '{}', '', '', True);
+     VALUES (1, 1, 1, 1, '2023-12-22 10:00:00', '2023-12-22 12:00:00', 1, 1, '{"ADVANCED"}', '一起高手過招吧。', 'qwer', False),
+            (2, 1, 1, 2, '2023-12-23 08:20:00', '2023-12-23 11:20:00', 2, 2, '{"INTERMEDIATE"}', '成為強者的路上我需要你們跟我們一起！', 'absd', False),
+            (3, 1, 1, 3, '2023-12-24 16:00:00', '2023-12-24 18:00:00', 2, 2, '{"INTERMEDIATE"}', '運動身體好！', 'dcfe', False),
+            (4, 1, 1, 4, '2023-12-25 13:00:00', '2023-12-25 14:00:00', 2, 2, '{"ENTRY"}', '新手輕鬆打！', 'veot', False),
+            (5, 1, 2, 9, '2023-12-26 16:00:00', '2023-12-26 17:00:00', 1, 1, '{"ENTRY"}', '歡迎加入科技業上班族的休閒活動！', 'thrt', False),
+            (6, 1, 3, 15, '2023-12-27 11:00:00', '2023-12-27 13:00:00', 1, 1, '{"ENTRY"}', '希望可以找到新手夥伴一起練習。', 'wrfc', False),
+            (7, 1, 1, 2, '2023-12-25 16:00:00', '2023-12-25 17:00:00', 2, 0, '{}', '', '', True),
+            (8, 1, 10, 36, '2023-12-22 11:00:00', '2023-12-22 13:00:00', 2, 0, '{}', '', '', True);
 
 INSERT INTO reservation_member(reservation_id, account_id, is_manager, status)
      VALUES (1, 1, True, 'JOINED'),
