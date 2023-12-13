@@ -71,7 +71,15 @@ INSERT INTO venue (id, stadium_id, name, floor, reservation_interval, is_reserva
                (7, 1, '技擊室', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 120, 100, 'sport equipment', 'facility', '場', 5),
                (8, 1, '小桌球室', '3', 3, 't', 't', 1, 'PER_HOUR', 35, 30, 100, 'sport equipment', 'facility', '場', 1),
                (9, 1, '羽球場 B', '3', 3, 't', 't', 1, 'PER_HOUR', 55, 10, 100, 'sport equipment', 'facility', '場', 2),
-               (10, 1, '韻律教室', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', '場', 5);
+               (10, 1, '韻律教室', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', '場', 5),
+               (11, 2, '羽球場', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', '場', 2),
+               (12, 2, '桌球室', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', '場', 1),
+               (13, 3, '羽球場', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', '場', 2),
+               (14, 4, '羽球場', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', '場', 2),
+               (15, 5, '韻律教室', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', '場', 5),
+               (16, 6, '桌球場', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', '場', 1),
+               (17, 7, '桌球場', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', '場', 1),
+               (18, 8, '壁球室', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', '場', 3);
 
 INSERT INTO business_hour(id, place_id, type, weekday, start_time, end_time)
      VALUES (1, 1, 'STADIUM', 1, '08:00', '17:00'),
