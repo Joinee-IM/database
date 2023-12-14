@@ -27,17 +27,17 @@ INSERT INTO account (id, email, pass_hash, nickname, gender,
                      access_token, refresh_token, image_uuid, role, is_verified, is_google_login)
      VALUES (1, 'b09705017@ntu.im',
              '$argon2id$v=19$m=65536,t=3,p=4$UApBiLHWmlNqrfX+35uTEg$B2y8eFnz/IxszZVCEP+tG9gz9xBbMjG0uOqnOeYLsMA',
-             'nickname', 'MALE', 'ya29.a0AfB_byDxT4O2VPM1_PXqWuztXVxc5uuMvC8I49szUr8aseaAImbV29TFLNSBIpxy8A9cnBubXEMCcMLqet5kgkS2e-fywxwMinqyO5jFiPm1_VyyNpO8WU5sRTLN3Od1YQgsvbfR8KwTEu97pE_LJW0LGQCTNvOC6w5naCgYKAWUSARASFQHGX2MiiepMO8NFyTjoCFh3ekOMVA0171',
+             'donkey', 'MALE', 'ya29.a0AfB_byDxT4O2VPM1_PXqWuztXVxc5uuMvC8I49szUr8aseaAImbV29TFLNSBIpxy8A9cnBubXEMCcMLqet5kgkS2e-fywxwMinqyO5jFiPm1_VyyNpO8WU5sRTLN3Od1YQgsvbfR8KwTEu97pE_LJW0LGQCTNvOC6w5naCgYKAWUSARASFQHGX2MiiepMO8NFyTjoCFh3ekOMVA0171',
              '1//0eVXqbArb0RZfCgYIARAAGA4SNwF-L9IrOl6hvAoQVtZ9esIq9CN8OirIrHykZ7sLM5G7QoEKAJ9B4hOFVtJaet9_yrENPN1WXUQ', 'c6fb3f9e-c67a-4391-9afd-6e52fec77e1f',
              'NORMAL', 't', 't'),
              (2, 'benson.wang@appier.com',
              '$argon2id$v=19$m=65536,t=3,p=4$UApBiLHWmlNqrfX+35uTEg$B2y8eFnz/IxszZVCEP+tG9gz9xBbMjG0uOqnOeYLsMA',
-             'nickname', 'MALE', 'ya29.a0AfB_byBsK7E2PhorJi52ywRxiWxwyamqrFKR2LQ_eggWzNzCYznT6gBHqfJIXZzGv5TkmrMU-Iu14gg_wlgiqTffTf6DS_1CwhC-3ar5f7iB3_gi8zi1OVdmDrVICpcGaaQuhGCUXXovfW7yIt6OwKukYSfxdsBJTBELaCgYKAUASARASFQHGX2MiPR82NeWjYkI1cZzI4YqczQ0171',
+             'wsa', 'MALE', 'ya29.a0AfB_byBsK7E2PhorJi52ywRxiWxwyamqrFKR2LQ_eggWzNzCYznT6gBHqfJIXZzGv5TkmrMU-Iu14gg_wlgiqTffTf6DS_1CwhC-3ar5f7iB3_gi8zi1OVdmDrVICpcGaaQuhGCUXXovfW7yIt6OwKukYSfxdsBJTBELaCgYKAUASARASFQHGX2MiPR82NeWjYkI1cZzI4YqczQ0171',
              '1//0e2oovw6ZHSkoCgYIARAAGA4SNwF-L9Irbq2klM5MGZE7TZTQd-Y_mk9WvhiXxmXDMcalLGE6ouTEzpy98JJfQb0LUmRzHxT97Hs', 'c6fb3f9e-c67a-4391-9afd-6e52fec77e1f',
              'NORMAL', 't', 't'),
              (3, 'am8liu@ntu.im',
              '$argon2id$v=19$m=65536,t=3,p=4$UApBiLHWmlNqrfX+35uTEg$B2y8eFnz/IxszZVCEP+tG9gz9xBbMjG0uOqnOeYLsMA',
-             'nickname', 'FEMALE', 'ya29.a0AfB_byCqWC0Hzdn88VVnDATcIpYXFyQ_qi9Uwjq1hZvclOaiwpCsBeCAObzoaxZy97cI7H10XHDeBDDyDF45w6rBu3_7tu-VPyFn2NLfYk1HjtIH5ZVFh7_tP1L5b6HYZSxemeGXoX8L2Z2IhwurkEQpT3l4BjjC4q3eaCgYKAX0SARASFQHGX2Mixto-HVPZEI_Pot6b9rfOhw0171',
+             'amber', 'FEMALE', 'ya29.a0AfB_byCqWC0Hzdn88VVnDATcIpYXFyQ_qi9Uwjq1hZvclOaiwpCsBeCAObzoaxZy97cI7H10XHDeBDDyDF45w6rBu3_7tu-VPyFn2NLfYk1HjtIH5ZVFh7_tP1L5b6HYZSxemeGXoX8L2Z2IhwurkEQpT3l4BjjC4q3eaCgYKAX0SARASFQHGX2Mixto-HVPZEI_Pot6b9rfOhw0171',
              '1//0eYS_hlRdyIKJCgYIARAAGA4SNwF-L9IrRnSwx5cq9RqMYRxvJ-Vm-NSnXpADGtdCbfUvzt9sEt-cq7ScV6Dhrg97B24r2BTLqQc', 'c6fb3f9e-c67a-4391-9afd-6e52fec77e1f',
              'PROVIDER', 't', 't');
 
@@ -71,7 +71,15 @@ INSERT INTO venue (id, stadium_id, name, floor, reservation_interval, is_reserva
                (7, 1, '技擊室', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 120, 100, 'sport equipment', 'facility', '場', 5),
                (8, 1, '小桌球室', '3', 3, 't', 't', 1, 'PER_HOUR', 35, 30, 100, 'sport equipment', 'facility', '場', 1),
                (9, 1, '羽球場 B', '3', 3, 't', 't', 1, 'PER_HOUR', 55, 10, 100, 'sport equipment', 'facility', '場', 2),
-               (10, 1, '韻律教室', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', '場', 5);
+               (10, 1, '韻律教室', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', '場', 5),
+               (11, 2, '羽球場', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', '場', 2),
+               (12, 2, '桌球室', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', '場', 1),
+               (13, 3, '羽球場', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', '場', 2),
+               (14, 4, '羽球場', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', '場', 2),
+               (15, 5, '韻律教室', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', '場', 5),
+               (16, 6, '桌球場', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', '場', 1),
+               (17, 7, '桌球場', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', '場', 1),
+               (18, 8, '壁球室', '3', 3, 't', 'f', 1, 'PER_HOUR', 35, 10, 100, 'sport equipment', 'facility', '場', 3);
 
 INSERT INTO business_hour(id, place_id, type, weekday, start_time, end_time)
      VALUES (1, 1, 'STADIUM', 1, '08:00', '17:00'),
@@ -186,13 +194,21 @@ INSERT INTO court (id, venue_id, number)
 INSERT INTO reservation
             (id, stadium_id, venue_id, court_id, start_time, end_time, member_count, vacancy, technical_level, remark, invitation_code, is_cancelled)
      VALUES (1, 1, 1, 1, '2023-12-22 10:00:00', '2023-12-22 12:00:00', 1, 1, '{"ADVANCED"}', '一起高手過招吧。', 'qwer', False),
-            (2, 1, 1, 2, '2023-12-23 08:20:00', '2023-12-23 11:20:00', 2, 2, '{"INTERMEDIATE"}', '成為強者的路上我需要你們跟我們一起！', 'absd', False),
-            (3, 1, 1, 3, '2023-12-24 16:00:00', '2023-12-24 18:00:00', 2, 2, '{"INTERMEDIATE"}', '運動身體好！', 'dcfe', False),
-            (4, 1, 1, 4, '2023-12-25 13:00:00', '2023-12-25 14:00:00', 2, 2, '{"ENTRY"}', '新手輕鬆打！', 'veot', False),
-            (5, 1, 2, 9, '2023-12-26 16:00:00', '2023-12-26 17:00:00', 1, 1, '{"ENTRY"}', '歡迎加入科技業上班族的休閒活動！', 'thrt', False),
-            (6, 1, 3, 15, '2023-12-27 11:00:00', '2023-12-27 13:00:00', 1, 1, '{"ENTRY"}', '希望可以找到新手夥伴一起練習。', 'wrfc', False),
-            (7, 1, 1, 2, '2023-12-25 16:00:00', '2023-12-25 17:00:00', 2, 0, '{}', '', '', True),
-            (8, 1, 10, 36, '2023-12-22 11:00:00', '2023-12-22 13:00:00', 2, 0, '{}', '', '', True);
+            (2, 1, 1, 1, '2023-12-23 08:20:00', '2023-12-23 11:20:00', 2, 2, '{"INTERMEDIATE"}', '成為強者的路上我需要你們跟我們一起！', 'absd', False),
+            (3, 1, 1, 1, '2023-12-24 16:00:00', '2023-12-24 17:00:00', 2, 2, '{"INTERMEDIATE"}', '運動身體好！', 'dcfe', False),
+            (4, 1, 1, 1, '2023-12-25 09:00:00', '2023-12-25 15:00:00', 2, 2, '{"ENTRY"}', '新手輕鬆打！', 'veot', False),
+            (5, 1, 1, 1, '2023-12-25 09:00:00', '2023-12-25 15:00:00', 1, 1, '{"ENTRY"}', '歡迎加入科技業上班族的休閒活動！', 'thrt', False),
+            (6, 1, 1, 1, '2023-12-27 11:00:00', '2023-12-27 13:00:00', 1, 1, '{"ENTRY"}', '希望可以找到新手夥伴一起練習。', 'wrfc', False),
+            (7, 1, 1, 1, '2023-12-25 16:00:00', '2023-12-25 17:00:00', 2, 0, '{}', '', '', True),
+            (8, 1, 1, 1, '2023-12-22 11:00:00', '2023-12-22 13:00:00', 2, 0, '{}', '', '', True),
+            (9, 1, 1, 1, '2023-12-29 11:00:00', '2023-12-29 13:00:00', 2, 0, '{}', '', '', False),
+            (10, 1, 1, 2, '2023-12-25 09:00:00', '2023-12-25 16:00:00', 2, 0, '{}', '', '', False),
+            (11, 1, 1, 3, '2023-12-25 09:00:00', '2023-12-25 16:00:00', 2, 0, '{}', '', '', False),
+            (12, 1, 1, 4, '2023-12-25 09:00:00', '2023-12-25 16:00:00', 2, 0, '{}', '', '', False),
+            (13, 1, 1, 5, '2023-12-25 09:00:00', '2023-12-25 16:00:00', 2, 0, '{}', '', '', False),
+            (14, 1, 1, 1, '2023-12-26 09:00:00', '2023-12-26 10:00:00', 2, 2, '{"ENTRY"}', '新手一起玩！', 'grgt', False),
+            (15, 1, 1, 1, '2023-12-27 15:00:00', '2023-12-27 16:00:00', 2, 2, '{"ENTRY"}', '新手聯盟！', 'ewfe', False),
+            (16, 1, 1, 1, '2023-12-28 09:00:00', '2023-12-28 10:00:00', 2, 2, '{"ENTRY"}', '新手新手萬萬歲！', 'htrw', False);
 
 INSERT INTO reservation_member(reservation_id, account_id, is_manager, status)
      VALUES (1, 1, True, 'JOINED'),
