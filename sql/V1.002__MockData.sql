@@ -44,12 +44,25 @@ INSERT INTO account (id, email, pass_hash, nickname, gender,
 
 INSERT INTO sport(id, name) VALUES (1, '桌球'), (2, '羽球'), (3, '壁球'), (4, '柔道'), (5, '舞蹈');
 
-INSERT INTO city(id, name) VALUES (1, '臺北市');
+INSERT INTO city(id, name) VALUES (1, '臺北市'), (2, '新北市'), (3, '桃園市'), (4, '臺中市'), (5, '臺南市'), (6, '高雄市');
 INSERT INTO district(id, city_id, name)
      VALUES (1, 1, '大安區'),
                (2, 1, '中正區'),
                (3, 1, '內湖區'),
-               (4, 1, '松山區');
+               (4, 1, '松山區'),
+               (5, 1, '南港區'),
+               (6, 1, '文山區'),
+               (7, 1, '北投區'),
+               (8, 1, '士林區'),
+               (9, 1, '大同區'),
+               (10, 1, '中山區'),
+               (11, 1, '萬華區'),
+               (12, 1, '信義區'),
+               (13, 2, '永和區'),
+               (14, 3, '大溪區'),
+               (15, 4, '太平區'),
+               (16, 5, '麻豆區'),
+               (17, 6, '左營區');
 
 INSERT INTO stadium (id, name, district_id, owner_id, address, contact_number, description, long, lat)
      VALUES (1, '臺大體育館', 1, 3, '臺北市大安區羅斯福路四段 1 號', '02-27618235', '歡迎你來這邊運動，我們這邊應有盡有，快來這邊大顯身手，羽球與桌球健將們。', 121.53511, 25.02269),
