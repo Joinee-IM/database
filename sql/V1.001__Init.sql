@@ -13,10 +13,10 @@ CREATE TYPE gender_type AS ENUM (
 );
 
 CREATE TYPE fee_type AS ENUM (
-    'PER_PERSON_PER_HOUR',
-    'PER_HOUR',
+    'PER_RESERVATION',
     'PER_PERSON',
-    'PER_RESERVATION'
+    'PER_HOUR',
+    'PER_PERSON_PER_HOUR'
 );
 
 CREATE TYPE place_type AS ENUM (
