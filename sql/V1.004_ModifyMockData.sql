@@ -21,7 +21,15 @@ INSERT INTO gcs_file (file_uuid, bucket, key, filename)
                ('74458476-5fb2-4965-a5b4-717305899982', 'cloud-native-storage-db', '74458476-5fb2-4965-a5b4-717305899982', '74458476-5fb2-4965-a5b4-717305899982'),
                ('ce8b9701-1fdd-445a-8016-36818bc4e5b8', 'cloud-native-storage-db', 'ce8b9701-1fdd-445a-8016-36818bc4e5b8', 'ce8b9701-1fdd-445a-8016-36818bc4e5b8'),
                ('867cc079-c937-4a38-b7b4-5dc21a0fe4eb', 'cloud-native-storage-db', '867cc079-c937-4a38-b7b4-5dc21a0fe4eb', '867cc079-c937-4a38-b7b4-5dc21a0fe4eb'),
-               ('9a3ca6e1-2b20-4ea4-8ed0-345e9f076987', 'cloud-native-storage-db', '9a3ca6e1-2b20-4ea4-8ed0-345e9f076987', '9a3ca6e1-2b20-4ea4-8ed0-345e9f076987');
+               ('9a3ca6e1-2b20-4ea4-8ed0-345e9f076987', 'cloud-native-storage-db', '9a3ca6e1-2b20-4ea4-8ed0-345e9f076987', '9a3ca6e1-2b20-4ea4-8ed0-345e9f076987'),
+               ('2dd9a1d5-9dbc-4209-9591-f8d02cc56107', 'cloud-native-storage-db', '2dd9a1d5-9dbc-4209-9591-f8d02cc56107', '2dd9a1d5-9dbc-4209-9591-f8d02cc56107'),
+               ('459ab006-3687-4841-a3fc-5bb8fc9296d0', 'cloud-native-storage-db', '459ab006-3687-4841-a3fc-5bb8fc9296d0', '459ab006-3687-4841-a3fc-5bb8fc9296d0'),
+               ('cda7c3c0-d738-4051-a2dd-9a599ba5be33', 'cloud-native-storage-db', 'cda7c3c0-d738-4051-a2dd-9a599ba5be33', 'cda7c3c0-d738-4051-a2dd-9a599ba5be33'),
+               ('050b9fcc-5561-4bb4-a8da-932a9cc5776a', 'cloud-native-storage-db', '050b9fcc-5561-4bb4-a8da-932a9cc5776a', '050b9fcc-5561-4bb4-a8da-932a9cc5776a'),
+               ('296b090a-c15e-4346-9de8-7dea766458a9', 'cloud-native-storage-db', '296b090a-c15e-4346-9de8-7dea766458a9', '296b090a-c15e-4346-9de8-7dea766458a9'),
+               ('3670740a-9630-4909-a6c2-17b87dda9730', 'cloud-native-storage-db', '3670740a-9630-4909-a6c2-17b87dda9730', '3670740a-9630-4909-a6c2-17b87dda9730'),
+               ('e9c7e2af-2191-4088-be81-f11205f41514', 'cloud-native-storage-db', 'e9c7e2af-2191-4088-be81-f11205f41514', 'e9c7e2af-2191-4088-be81-f11205f41514'),
+               ('20a895e4-8ad9-41b7-8311-c3e3256d41e5', 'cloud-native-storage-db', '20a895e4-8ad9-41b7-8311-c3e3256d41e5', '20a895e4-8ad9-41b7-8311-c3e3256d41e5');
 
 INSERT INTO account (id, email, pass_hash, nickname, gender,
                      access_token, refresh_token, image_uuid, role, is_verified, is_google_login)
@@ -266,7 +274,15 @@ INSERT INTO album(id, place_id, type, file_uuid)
                (24, 1, 'STADIUM', '412ad0f9-47d5-41fb-8e13-590140f2bf50'),
                (25, 6, 'STADIUM', 'ce8b9701-1fdd-445a-8016-36818bc4e5b8'),
                (26, 7, 'STADIUM', '867cc079-c937-4a38-b7b4-5dc21a0fe4eb'),
-               (27, 8, 'STADIUM', '9a3ca6e1-2b20-4ea4-8ed0-345e9f076987');
+               (27, 8, 'STADIUM', '9a3ca6e1-2b20-4ea4-8ed0-345e9f076987'),
+               (28, 11, 'VENUE', '459ab006-3687-4841-a3fc-5bb8fc9296d0'),
+               (29, 12, 'VENUE', '2dd9a1d5-9dbc-4209-9591-f8d02cc56107'),
+               (30, 13, 'VENUE', 'cda7c3c0-d738-4051-a2dd-9a599ba5be33'),
+               (31, 14, 'VENUE', '050b9fcc-5561-4bb4-a8da-932a9cc5776a'),
+               (32, 15, 'VENUE', '296b090a-c15e-4346-9de8-7dea766458a9'),
+               (33, 16, 'VENUE', '3670740a-9630-4909-a6c2-17b87dda9730'),
+               (34, 17, 'VENUE', 'e9c7e2af-2191-4088-be81-f11205f41514'),
+               (35, 18, 'VENUE', '20a895e4-8ad9-41b7-8311-c3e3256d41e5');
 
 INSERT INTO court (id, venue_id, number)
      VALUES (1, 1, 1), (2, 1, 2), (3, 1, 3), (4, 1, 4), (5, 1, 5), (6, 1, 6), (7, 1, 7), (8, 1, 8),
@@ -313,7 +329,10 @@ INSERT INTO reservation
             (21, 2, 12, 46, '2023-12-28 09:00:00', '2023-12-28 10:00:00', 2, 2, '{"ADVANCED"}', '高！手！萬萬歲！', 'duwq', False),
             (22, 2, 11, 41, '2023-12-25 09:00:00', '2023-12-25 10:00:00', 2, 2, '{"INTERMEDIATE"}', '運動身體好，健康沒煩惱。', 'azxc', False),
             (23, 2, 11, 41, '2023-12-26 15:00:00', '2023-12-26 16:00:00', 2, 2, '{"INTERMEDIATE"}', '健康沒煩惱，運動身體好', 'tywe', False),
-            (24, 2, 11, 41, '2023-12-27 09:00:00', '2023-12-27 10:00:00', 2, 2, '{"ENTRY"}', '交個朋友吧，希望可以認識同樣熱愛打球的朋友！', 'gree', False);
+            (24, 2, 11, 41, '2023-12-27 09:00:00', '2023-12-27 10:00:00', 2, 2, '{"ENTRY"}', '交個朋友吧，希望可以認識同樣熱愛打球的朋友！', 'gree', False),
+            (25, 2, 11, 41, '2023-12-19 09:00:00', '2023-12-19 10:00:00', 0, -1, '{}', '', '', False),
+            (26, 2, 11, 41, '2023-12-18 09:00:00', '2023-12-18 10:00:00', 0, -1, '{}', '', '', False),
+            (27, 2, 11, 41, '2023-12-17 09:00:00', '2023-12-17 10:00:00', 0, -1, '{}', '', '', False);
 
 INSERT INTO reservation_member(reservation_id, account_id, is_manager, status)
      VALUES (1, 1, True, 'JOINED'),
@@ -379,4 +398,7 @@ INSERT INTO reservation_member(reservation_id, account_id, is_manager, status)
                (23, 4, False, 'REJECTED'),
                (24, 1, False, 'JOINED'),
                (24, 2, True, 'JOINED'),
-               (24, 4, False, 'REJECTED');
+               (24, 4, False, 'REJECTED'),
+               (25, 1, True, 'JOINED'),
+               (26, 1, True, 'JOINED'),
+               (27, 1, True, 'JOINED');
