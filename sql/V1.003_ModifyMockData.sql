@@ -18,6 +18,14 @@ INSERT INTO album(id, place_id, type, file_uuid)
                (34, 17, 'VENUE', 'e9c7e2af-2191-4088-be81-f11205f41514'),
                (35, 18, 'VENUE', '20a895e4-8ad9-41b7-8311-c3e3256d41e5');
 
+INSERT INTO business_hour(id, place_id, type, weekday, start_time, end_time)
+     VALUES (181, 1, 'VENUE', 6, '08:00', '17:00'),
+               (182, 1, 'VENUE', 7, '08:00', '17:00'),
+               (183, 11, 'VENUE', 6, '09:00', '17:00'),
+               (184, 11, 'VENUE', 7, '09:00', '17:00'),
+               (185, 12, 'VENUE', 6, '09:00', '17:00'),
+               (186, 12, 'VENUE', 7, '09:00', '17:00');
+
 INSERT INTO reservation
             (id, stadium_id, venue_id, court_id, start_time, end_time, member_count, vacancy, technical_level, remark, invitation_code, is_cancelled)
      VALUES (25, 2, 11, 41, '2023-12-19 09:00:00', '2023-12-19 10:00:00', 0, -1, '{}', '', '', False),
